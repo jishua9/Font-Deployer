@@ -25,4 +25,3 @@ try {
 catch{
     write-error "General Failure"
 }
-Pause
