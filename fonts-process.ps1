@@ -15,7 +15,8 @@ try {
             }
 
             try{
-                New-ItemProperty -path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" -Name $fontreg -value $font
+                Write-Host "copying $fontreg" -ForegroundColor Green
+                New-ItemProperty -path "HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Fonts" -Name $fontreg -value $fontname
             }
             catch{
                 write-host "unable to create registry file for $fontreg" -ForegroundColor Green
